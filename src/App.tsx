@@ -67,36 +67,51 @@ const App = () => {
     return 237.3 / ((7.5 / (Math.log10(TV) - Math.log10(6.11))) - 1);
   };
 
-  
+
   const eActual = calcularTensionVapor(termometroSeco, termometroHumedo, 1000);
   const humedadRelativa = calcularHumedadRelativa(termometroSeco, eActual);
   const puntoRocio = calcularPuntoRocio(eActual);
 
   return (
-    <div>
-      <h1>Psicrómetro</h1>
-      <h2>DATOS PSICROMÉTRICOS</h2>
-      <div>
-        <h3>Termómetro Seco</h3>
-        <input
-          type="number"
-          value={termometroSeco}
-          onChange={(e) => setTermometroSeco(parseFloat(e.target.value))}
-          placeholder="Termómetro Seco"
-        /> <br />
-        <h3>Termómetro Húmedo</h3>
-        <input
-          type="number"
-          value={termometroHumedo}
-          onChange={(e) => setTermometroHumedo(parseFloat(e.target.value))}
-          placeholder="Termómetro Húmedo"
-        />
+    <div className="contenedor-principal">
+      <h1 className="titulo">Psicrómetro</h1>
+      <h2 className="subtitulo">DATOS PSICROMÉTRICOS</h2>
+  
+      <div className="contenedor-inputs">
+        <div className="columna-input">
+          <h3>Termómetro Seco</h3>
+          <input
+            type="number"
+            value={termometroSeco}
+            onChange={(e) => setTermometroSeco(parseFloat(e.target.value))}
+            className="campo-temperatura"
+          />
+        </div>
+  
+        <div className="columna-input">
+          <h3>Termómetro Húmedo</h3>
+          <input
+            type="number"
+            value={termometroHumedo}
+            onChange={(e) => setTermometroHumedo(parseFloat(e.target.value))}
+            className="campo-temperatura"
+          />
+        </div>
       </div>
-
-      <div>
-        <h3>Humedad Relativa: {Math.round(humedadRelativa)}%</h3>
-        <h3>Tensión de Vapor: {eActual.toFixed(1)} hPa</h3>
-        <h3>Punto de Rocío: {puntoRocio.toFixed(1)} °C</h3>
+  
+      <div className="contenedor-resultados">
+        <div className="columna-resultado">
+          <h4>Humedad Relativa</h4>
+          <p className="valor-resultado">{Math.round(humedadRelativa)}%</p>
+        </div>
+        <div className="columna-resultado">
+          <h4>Tensión de Vapor</h4>
+          <p className="valor-resultado">{eActual.toFixed(1)} hPa</p>
+        </div>
+        <div className="columna-resultado">
+          <h4>Punto de Rocío</h4>
+          <p className="valor-resultado">{puntoRocio.toFixed(1)} °C</p>
+        </div>
       </div>
     </div>
   );

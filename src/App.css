@@ -1,21 +1,133 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
+} */
 
-.inputs-container {
+/* ESTILOS BASE (Desktop por defecto) */
+.contenedor-principal {
   display: flex;
-  gap: 1rem; /* Espacio entre los inputs */
-  justify-content: center; /* Centra los elementos */
+  flex-direction: column;
   align-items: center;
-  margin-top: 1rem; /* Separación con el subtítulo */
+  text-align: center;
+  padding: 40px;
+  font-family: Arial, sans-serif;
 }
 
-.inputs-container label {
+.titulo {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  font-size: 30px;
+  margin-bottom: 35px;
+}
+
+.contenedor-inputs {
   display: flex;
-  flex-direction: column; /* Coloca el texto encima del input */
-  text-align: left; /* Alinea el texto del label */
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
+.columna-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.campo-temperatura {
+  width: 160px;
+  font-size: 50px;
+  padding: 15px;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.contenedor-resultados {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.columna-resultado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.valor-resultado {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .titulo {
+    font-size: 40px;
+  }
+
+  .subtitulo {
+    font-size: 24px;
+  }
+
+  .campo-temperatura {
+    width: 140px;
+    font-size: 40px;
+  }
+
+  .valor-resultado {
+    font-size: 32px;
+  }
+
+  .contenedor-inputs,
+  .contenedor-resultados {
+    gap: 30px;
+  }
+}
+
+/* TELÉFONOS */
+@media (max-width: 600px) {
+  .titulo {
+    font-size: 32px;
+  }
+
+  .subtitulo {
+    font-size: 20px;
+  }
+
+  .columna-input {
+    margin-bottom: 10px; /* Optional: reduce extra spacing if any */
+  }
+
+  .contenedor-inputs,
+  .contenedor-resultados {
+    flex-direction: column;
+    align-items: center;
+    gap: 1px; /* Reduces spacing between items */
+  }
+
+  .campo-temperatura {
+    width: 120px;
+    font-size: 30px;
+    margin-top: 1px; /* Antes estaba en 10px */
+    padding-bottom: 5%;
+  }
+
+  .valor-resultado {
+    font-size: 30px;
+    margin-top: -20px;
+  }
+
+  .columna-resultado{
+    margin-top: -50px;
+    padding: 10px;
+  }
+}
