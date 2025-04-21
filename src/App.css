@@ -1,0 +1,21 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.inputs-container {
+  display: flex;
+  gap: 1rem; /* Espacio entre los inputs */
+  justify-content: center; /* Centra los elementos */
+  align-items: center;
+  margin-top: 1rem; /* Separación con el subtítulo */
+}
+
+.inputs-container label {
+  display: flex;
+  flex-direction: column; /* Coloca el texto encima del input */
+  text-align: left; /* Alinea el texto del label */
+}
+
