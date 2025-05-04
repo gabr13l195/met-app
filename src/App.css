@@ -11,7 +11,6 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 40px;
   font-family: Arial, sans-serif;
 }
 
@@ -21,16 +20,12 @@
 }
 
 .subtitulo {
-  font-size: 30px;
-  margin-bottom: 35px;
+  font-size: 20px;
 }
 
 .contenedor-inputs {
   display: flex;
   justify-content: center;
-  gap: 50px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
 }
 
 .columna-input {
@@ -42,9 +37,8 @@
 .campo-temperatura {
   width: 160px;
   font-size: 50px;
-  padding: 15px;
+  padding: 5px;
   text-align: center;
-  margin-top: 10px;
   font-weight: bold;
 }
 
@@ -63,7 +57,7 @@
 }
 
 .valor-resultado {
-  font-size: 40px;
+  font-size: 100px;
   font-weight: bold;
   margin-top: 5px;
 }
@@ -103,26 +97,21 @@
     font-size: 20px;
   }
 
-  .columna-input {
-    margin-bottom: 10px; /* Optional: reduce extra spacing if any */
-  }
-
   .contenedor-inputs,
   .contenedor-resultados {
     flex-direction: column;
     align-items: center;
-    gap: 1px; /* Reduces spacing between items */
+    gap: 0px; /* Reduces spacing between items */
   }
 
   .campo-temperatura {
-    width: 120px;
-    font-size: 30px;
-    margin-top: 1px; /* Antes estaba en 10px */
-    padding-bottom: 5%;
+    width: 100px;
+    font-size: 25px;
+    margin-top: -10px; /* Antes estaba en 10px */
   }
 
   .valor-resultado {
-    font-size: 30px;
+    font-size: 20px;
     margin-top: -20px;
   }
 
