@@ -113,7 +113,10 @@ const App = () => {
           <p className="valor-resultado">{puntoRocio.toFixed(1)} °C</p>
         </div>
       </div>
+      <p className="footer">Elaborado por Wilmer Betancourt</p>
     </div>
+  
+
   );
 };
 

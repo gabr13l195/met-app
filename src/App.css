@@ -62,6 +62,11 @@
   margin-top: 5px;
 }
 
+.footer{
+  font-style: italic;
+  font-size: small;
+}
+
 /* TABLET */
 @media (max-width: 1024px) {
   .titulo {
