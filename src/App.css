@@ -1,127 +1,121 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
+/* Reset y estilos base */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
   padding: 2rem;
-  text-align: center;
-} */
-
-/* ESTILOS BASE (Desktop por defecto) */
-.contenedor-principal {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  font-family: Arial, sans-serif;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 }
 
-.titulo {
-  font-size: 50px;
-  margin-bottom: 10px;
+/* Sección de inputs */
+.inputs-section {
+  width: 100%;
+  margin-bottom: 3rem;
+  animation: fadeIn 0.8s ease-out;
 }
 
-.subtitulo {
-  font-size: 20px;
-}
-
-.contenedor-inputs {
+.inputs-grid {
   display: flex;
   justify-content: center;
-}
-
-.columna-input {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.campo-temperatura {
-  width: 100px;
-  font-size: 50px;
-  padding: 5px;
-  text-align: center;
-  font-weight: bold;
-}
-
-.contenedor-resultados {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  margin-top: 30px;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
-.columna-resultado {
+/* Sección de resultados */
+.results-section {
+  width: 100%;
+  animation: fadeIn 1s ease-out;
+}
+
+.results-grid {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
-.valor-resultado {
-  font-size: 30px;
-  font-weight: bold;
-  margin-top: 5px;
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.footer{
-  font-style: italic;
-  font-size: small;
-}
-
-/* TABLET */
+/* Tablet */
 @media (max-width: 1024px) {
-  .titulo {
-    font-size: 40px;
+  .app-container {
+    padding: 1.5rem;
   }
 
-  .subtitulo {
-    font-size: 24px;
+  .inputs-grid {
+    gap: 1.5rem;
   }
 
-  .campo-temperatura {
-    width: 140px;
-    font-size: 40px;
+  .results-grid {
+    gap: 1.2rem;
   }
 
-  .valor-resultado {
-    font-size: 32px;
-  }
-
-  .contenedor-inputs,
-  .contenedor-resultados {
-    gap: 30px;
+  .inputs-section {
+    margin-bottom: 2.5rem;
   }
 }
 
-/* TELÉFONOS */
+/* Mobile */
 @media (max-width: 600px) {
-  .titulo {
-    font-size: 32px;
+  .app-container {
+    padding: 0.75rem 0.6rem;
+    min-height: auto;
+    height: 100%;
+    overflow: hidden;
+    justify-content: flex-start;
   }
 
-  .subtitulo {
-    font-size: 20px;
-  }
-
-  .contenedor-inputs,
-  .contenedor-resultados {
+  .inputs-grid {
     flex-direction: column;
-    align-items: center;
-    gap: 0px; /* Reduces spacing between items */
+    gap: 0.6rem;
+    width: 100%;
   }
 
-  .campo-temperatura {
-    width: 100px;
-    font-size: 25px;
-    margin-top: -10px; /* Antes estaba en 10px */
+  .results-grid {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
   }
 
-  .valor-resultado {
-    font-size: 20px;
-    margin-top: -20px;
+  .inputs-section {
+    margin-bottom: 1rem;
   }
 
-  .columna-resultado{
-    margin-top: -50px;
-    padding: 10px;
+  .results-section {
+    margin-bottom: 0.75rem;
+  }
+}
+
+/* Pantallas muy pequeñas */
+@media (max-width: 360px) {
+  .app-container {
+    padding: 0.5rem 0.4rem;
+  }
+
+  .inputs-grid {
+    gap: 0.5rem;
+  }
+
+  .inputs-section {
+    margin-bottom: 0.75rem;
+  }
+
+  .results-section {
+    margin-bottom: 0.5rem;
   }
 }

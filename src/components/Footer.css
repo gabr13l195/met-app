@@ -1,0 +1,25 @@
+.app-footer {
+  margin-top: 2rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.footer-text {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .app-footer {
+    margin-top: 0.5rem;
+    padding: 0.3rem 0;
+  }
+
+  .footer-text {
+    font-size: 0.65rem;
+  }
+}
+

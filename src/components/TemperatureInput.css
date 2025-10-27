@@ -1,0 +1,180 @@
+.temperature-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 280px;
+}
+
+.temperature-input-container:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.input-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.input-icon {
+  font-size: 2rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.input-label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.temperature-input {
+  width: 100%;
+  font-size: 2.5rem;
+  padding: 1rem 3rem 1rem 1rem;
+  text-align: center;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  outline: none;
+  font-variant-numeric: tabular-nums;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.05em;
+}
+
+.temperature-input:focus {
+  border-color: #4a90e2;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+.temperature-input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  font-variant-numeric: tabular-nums;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.05em;
+}
+
+.input-unit {
+  position: absolute;
+  right: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .temperature-input-container {
+    max-width: 240px;
+    padding: 1.2rem;
+  }
+
+  .temperature-input {
+    font-size: 2rem;
+    padding: 0.8rem 2.5rem 0.8rem 0.8rem;
+  }
+
+  .input-icon {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .temperature-input-container {
+    max-width: 100%;
+    padding: 0.75rem 0.5rem;
+    margin: 0;
+    border-radius: 8px;
+    gap: 0.25rem;
+  }
+
+  .temperature-input-container:hover {
+    transform: none;
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .input-header {
+    gap: 0.25rem;
+    margin-bottom: 0.5rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .input-icon {
+    font-size: 1.2rem;
+    margin-right: 0.25rem;
+  }
+
+  .input-label {
+    font-size: 0.75rem;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .temperature-input {
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem 0.5rem 0.75rem;
+    border-radius: 8px;
+  }
+
+  .input-unit {
+    font-size: 0.9rem;
+    right: 0.6rem;
+  }
+}
+
+/* Pantallas muy pequeñas */
+@media (max-width: 360px) {
+  .temperature-input-container {
+    padding: 0.5rem 0.35rem;
+  }
+
+  .input-header {
+    margin-bottom: 0.35rem;
+  }
+
+  .input-icon {
+    font-size: 1rem;
+  }
+
+  .input-label {
+    font-size: 0.7rem;
+  }
+
+  .temperature-input {
+    font-size: 1.3rem;
+    padding: 0.4rem 1.8rem 0.4rem 0.6rem;
+  }
+
+  .input-unit {
+    font-size: 0.85rem;
+    right: 0.5rem;
+  }
+}
+
